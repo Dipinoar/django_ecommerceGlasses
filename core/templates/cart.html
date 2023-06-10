@@ -1,0 +1,45 @@
+{{ tmpl }}
+
+<main class="container">
+    <section id="productos-carrito">
+      <h1 class="text-center my-5" id="solo-carrito">RESUMEN DE LA COMPRA</h1>
+
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-danger" id="btn-vaciar">Vaciar carrito</button>
+      </div>
+      
+      
+      <div class="row">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">SKU</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Precio normal</th>
+              <th scope="col">Descuento</th>
+              <th scope="col">Precio Unitario</th>
+              <th scope="col">cantidad</th>
+              <th scope="col">Precio total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- CARGAR PRODUCTOS DE FORMA DINAMICA -->
+          </tbody>
+        </table>
+        <label for="cupon"><strong>Cupon descuento:</strong></label>
+        <input type="text" name="cupon" id="input-cupon">
+        <button id="btn-descuento" class="btn btn-success my-2">Aplicar descuento</button>
+        <p id="precio-total" class="text-end"></p>
+         <a class="d-flex flex-row-reverse"><button class="btn btn-success bg-primary ms-auto col-3" id="boton-pagar">Pagar</button></a>
+      </div>
+    </section>
+  </main>
+
+<script src="/static/js/carrito.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
+

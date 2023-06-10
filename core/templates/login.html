@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+
+{% block content %}     
+    <main class="form-signin text-center shadow-lg p-3 mb-5">
+    
+      <form id="formLogin" class="col-md-6 mx-auto" action="/login" method="POST">
+        <img class="mb-4" src="https://cdn-icons-png.flaticon.com/512/1785/1785384.png" alt="" width="300">
+        {% csrf_token %}
+        {% for fm in form %}
+        <div class="mb-3">
+            <label for="pass" class="form-label">{{fm.label}}</label>
+            <p>{{fm}} </p>
+        </div>  
+        {% endfor %} 
+        <button class="w-50 btn btn-lg btn-primary" type="submit">Login</button>    
+      </form>
+    
+      <br>
+      <a href="/login/register" type="button" class="w-100 btn btn-lg btn-bd-primary">Registrarse</a>
+    </main>
+    <script src="/static/js/cargaCarro.js"></script>
+    
+{% endblock %}
+
+

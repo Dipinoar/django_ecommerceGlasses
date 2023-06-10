@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 shadow-lg p-3 mb-5 mx-auto">
+
+          <div class="card border-primary">
+            <div class="card-header bg-primary text-white">Registrarse</div>
+            <div class="card-body text-primary">
+              <form action="/login/register" method="POST">        
+                {% csrf_token %}
+                {% for fm in form %}
+                <div class="mb-3 text-center">
+                    <label for="pass" class="form-label">{{fm.label}}</label>
+                    <p>{{fm}} </p>
+                </div>  
+                {% endfor %} 
+                 <!-- {{form.as_p}} -->
+            </div>
+            <div class="card-footer bg-transparent border-primary mx-auto">
+              <a href="/login" type="button" class="btn btn-secondary">Cancelar</a>
+              <button type="submit" class="btn btn-primary">Registrar</button>
+            </div>
+            </form>
+          </div>   
+    
+        </div>
+    </div>
+</div>
+
+<script src="/static/js/cargaCarro.js"></script>
+
+{% endblock %}

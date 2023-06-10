@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<section id="productos">
+  <h2 class="text-center mt-5">Encuentra tu estilo acá</h2>
+
+  <div class="row">
+    {% for product in products %}
+    <div class="col-12 col-md-6 col-lg-4 my-2">
+      <div class="card m-auto my-3" style="width: 18rem;">
+        <img src="/static/{{ product.imagen }}" class="card-img-top" alt="{{ product.nombre }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.nombre }}</h5>
+          <p class="card-text">{{ product.descripcion }}</p>
+          <p class="card-text">Precio: $ {{ product.precio }}</p>
+          <p class="card-text text-success">Descuento: - $ {{ product.descuento }}</p>
+          {% load custom_filters %}
+          <p class="card-text text-warning">Precio final: $ {{ product.precio|subtract:product.descuento }}</p>
+       
+          {% if product.stock %}
+          <p class="card-text text-success">Cantidad Disponible: {{product.stock}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <a href="" class="btn btn-outline-success" data-sku="{{product.sku}}" onclick="addToCart({{product.sku}})">Comprar</a>
+          </div>
+          {% else %}
+          <div>
+            <p class="card-text">Unidades agotadas</p>
+            <h4 class="card-text text-danger">No disponible</h4>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+<script src="/static/js/index.js"></script>
+
+
+{% endblock %}

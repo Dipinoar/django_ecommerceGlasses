@@ -1,0 +1,81 @@
+
+* { 
+    box-sizing: border-box;
+
+}
+
+.body { 
+    margin: 0%;
+
+ }
+
+.main {
+    padding: 20px;
+}
+
+ .main-header {
+    padding: 0 20px;
+ }
+
+ .main-title { 
+    text-align: center;
+    font-size: 2.5em;
+    margin: 10px 0px ;
+ }
+
+.main-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-menu {
+    font-size: 1.5em;
+    border: 1px solid black;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.main-header-btn {
+    display: block;
+    padding: 10px 25px;
+    color:black;
+    border: 1px solid black;
+}
+
+.main-header-input {
+    display: block;
+    padding: 10px;
+}
+
+
+
+/*ESTILO DE SLIDER*/
+
+.carousel-inner {
+    max-height: 39rem;
+}
+
+.carousel img {
+    height: 430px;
+    padding-top: 0.7%;
+}
+
+.carousel-caption {
+    font-size: 2.2em;
+    width: 70%;
+    margin: 5px 0;
+   
+}
+
+/*FOOTER*/
+
+footer{
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(165, 150, 145);
+  color: white;
+}
+
+
