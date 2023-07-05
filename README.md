@@ -1,1 +1,1 @@
-<h2>Versión Django del repositorio https://github.com/Dipinoar/Ecommerce-glasses-cloud</h2>
+<h2>The Django version of this repository https://github.com/Dipinoar/Ecommerce-Glasses-Node-VanillaJs</h2>
